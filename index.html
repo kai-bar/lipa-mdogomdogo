@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIPA MDOGO MDOGO</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #0a0a0a, #001f1f, #002b36);
+      color: #f5f5f5;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      animation: fadeInDown 1.2s ease;
+    }
+
+    header img {
+      width: 120px;
+      animation: logoAppear 2s ease;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: gold;
+      margin: 10px 0 0;
+    }
+
+    header p {
+      color: #00ffaa;
+      font-size: 1.1rem;
+      margin-top: 5px;
+      animation: fadeIn 2.5s ease;
+    }
+
+    .info-text {
+      text-align: center;
+      color: #87cefa;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .product {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 255, 170, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .product.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.2);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.4s ease;
+    }
+
+    .product img:hover {
+      transform: scale(1.05);
+    }
+
+    h2 {
+      color: gold;
+      margin-top: 15px;
+    }
+
+    p {
+      margin: 8px 0;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background: #00cc66;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      animation: pulse 2s infinite;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #00e676;
+      box-shadow: 0 0 10px #00ff88;
+    }
+
+    footer {
+      background: rgba(255, 255, 255, 0.05);
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+      color: gold;
+    }
+
+    footer a {
+      color: #00ffaa;
+      text-decoration: none;
+    }
+
+    #scrollTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #0077ff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00ccff;
+      display: none;
+      transition: background 0.3s ease;
+    }
+
+    #scrollTop:hover {
+      background: #00aaff;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes logoAppear {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 5px #00ff99; }
+      50% { box-shadow: 0 0 20px #00ff99; }
+      100% { box-shadow: 0 0 5px #00ff99; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.jpg" alt="LIPA MDOGO MDOGO Logo">
+    <h1>LIPA MDOGO MDOGO</h1>
+    <p>Pay As You Use</p>
+  </header>
+
+  <div class="info-text">Choose your preferred installment plan — Daily, Weekly, or Monthly.</div>
+
+  <div class="container">
+    <div class="product"><img src="images/vitron32.jpg" alt="Vitron 32 TV">
+      <h2>Vitron 32"</h2>
+      <p>Deposit: <strong>2,500 Ksh</strong></p>
+      <p>Daily: 40 Ksh | Weekly: 240 Ksh | Monthly: 1,200 Ksh</p>
+      <p>Total Loan: <strong>10,300 Ksh</strong></p>
+      <a class="btn" href="https://wa.me/254106711209?text=I'm%20interested%20in%20the%20Vitron%2032%22%20TV">Buy on WhatsApp</a>
+    </div>
+
+    <div class="product"><img src="images/tlc43.jpg" alt="TLC 43 TV">
+      <h2>TLC 43"</h2>
+      <p>Deposit: <strong>4,500 Ksh</strong></p>
+      <p>Daily: 60 Ksh | Weekly: 420 Ksh | Monthly: 1,800 Ksh</p>
+      <p>Total Loan: <strong>24,500 Ksh</strong></p>
+      <a class="btn" href="https://wa.me/254106711209?text=I'm%20interested%20in%20the%20TLC%2043%22%20TV">Buy on WhatsApp</a>
+    </div>
+
+    <div class="product"><img src="images/hisense.jpg" alt="Hisense 50 TV">
+      <h2>Hisense 50"</h2>
+      <p>Deposit: <strong>5,500 Ksh</strong></p>
+      <p>Daily: 70 Ksh | Weekly: 490 Ksh | Monthly: 2,100 Ksh</p>
+      <p>Total Loan: <strong>34,500 Ksh</strong></p>
+      <a class="btn" href="https://wa.me/254106711209?text=I'm%20interested%20in%20the%20Hisense%2050%22%20TV">Buy on WhatsApp</a>
+    </div>
+
+    <div class="product"><img src="images/skyworth.jpg" alt="Skyworth 65 TV">
+      <h2>Skyworth 65"</h2>
+      <p>Deposit: <strong>8,000 Ksh</strong></p>
+      <p>Daily: 100 Ksh | Weekly: 700 Ksh | Monthly: 3,000 Ksh</p>
+      <p>Total Loan: <strong>58,000 Ksh</strong></p>
+      <a class="btn" href="https://wa.me/254106711209?text=I'm%20interested%20in%20the%20Skyworth%2065%22%20TV">Buy on WhatsApp</a>
+    </div>
+
+    <div class="product"><img src="images/samsung75.jpg" alt="Samsung 75 TV">
+      <h2>Samsung 75"</h2>
+      <p>Deposit: <strong>12,000 Ksh</strong></p>
+      <p>Daily: 150 Ksh | Weekly: 1,050 Ksh | Monthly: 4,500 Ksh</p>
+      <p>Total Loan: <strong>108,500 Ksh</strong></p>
+      <a class="btn" href="https://wa.me/254106711209?text=I'm%20interested%20in%20the%20Samsung%2075%22%20TV">Buy on WhatsApp</a>
+    </div>
+
+    <div class="product"><img src="images/hisense85.jpg" alt="Hisense 85 TV">
+      <h2>Hisense 85"</h2>
+      <p>Deposit: <strong>15,000 Ksh</strong></p>
+      <p>Daily: 200 Ksh | Weekly: 1,400 Ksh | Monthly: 6,000 Ksh</p>
+      <p>Total Loan: <strong>114,500 Ksh</strong></p>
+      <a class="btn" href="https://wa.me/254106711209?text=I'm%20interested%20in%20the%20Hisense%2085%22%20TV">Buy on WhatsApp</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Contact us: <a href="mailto:lipamdomdogo938@gmail.com">lipamdomdogo938@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/254106711209">+254 106 711 209</a></p>
+    <p>We deliver countrywide 🚚</p>
+  </footer>
+
+  <button id="scrollTop">⬆</button>
+
+  <script>
+    const products = document.querySelectorAll('.product');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    products.forEach(product => observer.observe(product));
+
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+
+</body>
+</html>
